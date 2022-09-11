@@ -1,2 +1,2 @@
 # berein
-alte Dateien in bestimmten Verzeichnissen lłschen
+alte Dateien in bestimmten Verzeichnissen löschen
