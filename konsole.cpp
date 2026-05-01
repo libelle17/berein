@@ -402,7 +402,7 @@ string ersetze(string u, const char* alt, const char* neu) {
               }
               //	  <<jetzt<<"- "<<gesz<<"="<<sekunden<<endl;
             } // if (sscanf(Zeile
-            delete[] atm;
+            delete atm;
           } // (!abhier)
           if (abhier) {
 #ifdef obfstream
@@ -719,7 +719,7 @@ void aufiSplit(vector<string> *tokens, const string *text, const char* sep,bool 
     start = end + len;
   }
   tokens->push_back(text->substr(start));
-  delete usep;
+  delete[] usep;
 }
 
 void aufSplit(vector<string> *tokens, const string *text, char* sep,bool nichtdoppelt) 
