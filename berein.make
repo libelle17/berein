@@ -3,11 +3,13 @@ CC=g++
 #CFLAGS=-c -Wall -lvmime -lgnutls -lgsasl
 CFLAGS=-c -Wall -I/usr/include/mysql 
 LDFLAGS=-L/mysql/client/ -lmysqlclient 
-ifneq (,$(filter $(HOST),linux1 linux4))
-  PFAD=/DATA/down/cpp
-else ifeq ($(HOST),linux2)
-  PFAD =/vista/V/cpp
-endif
+#ifeq ($(HOST),linux0)
+ PFAD=.
+#else ifneq (,$(filter $(HOST),linux1 linux4))
+#  PFAD=/DATA/down/cpp
+#else ifeq ($(HOST),linux2)
+#  PFAD =/vista/V/cpp
+#endif
 FILES=berein.cpp konsole.cpp DB.cpp
 SRC= $(FILES:%.cpp=$(PFAD)/%.cpp)
 #OBJ=$(FILES:.cpp=.o)
